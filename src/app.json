@@ -1,0 +1,73 @@
+{
+    "pages": [
+        "pages/index/main",
+        "pages/learning/main",
+        "pages/mine/main"
+    ],
+    "subPackages": [{
+      "root": "pages/commonSubpackage/",
+      "pages": ["curriculum/main"]
+    }, {
+      "root": "pages/learningSubpackage/",
+      "pages": [
+        "assignment/main",
+        "course/main",
+        "examination-paper/main",
+        "mistakes/main",
+        "paper-content/main",
+        "task-list/main",
+        "task-webview/main"
+      ]
+    }, {
+      "root": "pages/mineSubpackage/",
+      "pages": [
+        "about/main",
+        "binding-mobile/main",
+        "help-feedback/main",
+        "mine-detail/main"
+      ]
+    }],
+    "preloadRule": {
+      "pages/index/main": {
+        "network": "all",
+        "packages": ["pages/commonSubpackage/"]
+      },
+      "pages/learning/main": {
+        "network": "all",
+        "packages": ["pages/learningSubpackage/"]
+      },
+      "pages/mine/main": {
+        "network": "all",
+        "packages": ["pages/mineSubpackage/"]
+      }
+    },
+    "tabBar": {
+        "list": [{
+            "pagePath": "pages/index/main",
+            "text": "首页",
+            "iconPath": "static/icon/index.png",
+            "selectedIconPath": "static/icon/selected_index.png"
+        }, {
+            "pagePath": "pages/learning/main",
+            "text": "学习栈",
+            "iconPath": "static/icon/logs.png",
+            "selectedIconPath": "static/icon/selected_logs.png"
+        }, {
+            "pagePath": "pages/mine/main",
+            "text": "我的",
+            "iconPath": "static/icon/my.png",
+            "selectedIconPath": "static/icon/selected_my.png"
+        }],
+        "color": "#bfbfbf",
+        "selectedColor": "#ff0000",
+        "backgroundColor": "#f4f4f4",
+        "position": "bottom",
+        "borderStyle": "black"
+    },
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    }
+}
