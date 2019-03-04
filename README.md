@@ -33,6 +33,7 @@ src   //  主要开发文件位置
 ```
 
 ## [Vuex](https://vuex.vuejs.org)在mpvue中使用
+### 安装
 ```bash
 npm install vuex -save
 ```
