@@ -105,3 +105,53 @@ git clone https://github.com/youzan/vant-weapp.git
 ```bash
 <van-badge title="标签名称" info="8" />
 ```
+## 分包加载
+### 使用分包
+在app.json中配置，通过 subpackages （或subPackages）字段声明项目分包结构：
+```bash
+"subPackages": [{
+  "root": "pages/commonSubpackage/",
+  "pages": ["curriculum/main"]
+}, {
+  "root": "pages/learningSubpackage/",
+  "pages": [
+    "assignment/main",
+    "course/main",
+    "examination-paper/main",
+    "mistakes/main",
+    "paper-content/main",
+    "task-list/main",
+    "task-webview/main"
+  ]
+}, {
+  "root": "pages/mineSubpackage/",
+  "pages": [
+    "about/main",
+    "binding-mobile/main",
+    "help-feedback/main",
+    "mine-detail/main"
+  ]
+}]
+```
+### 分包预下载
+预下载分包行为在进入某个页面时触发，通过在 app.json 增加 preloadRule 配置来控制：
+
+  network: 指定网络预加载；all表示不限定网络，wifi表示只在wifi下加载
+
+  packages：进入页面后预下载分包的root或name
+```bash
+"preloadRule": {
+  "pages/index/main": {
+    "network": "all",
+    "packages": ["pages/commonSubpackage/"]
+  },
+  "pages/learning/main": {
+    "network": "all",
+    "packages": ["pages/learningSubpackage/"]
+  },
+  "pages/mine/main": {
+    "network": "all",
+    "packages": ["pages/mineSubpackage/"]
+  }
+}
+```
