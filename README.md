@@ -1,5 +1,5 @@
 # mpvue-小程序
-基于[mpvue](http://mpvue.com)+[vant](https://youzan.github.io/vant-weapp)+[小程序](https://developers.weixin.qq.com/miniprogram/dev/)原生语法开发的小程序demo
+基于[mpvue](http://mpvue.com)+[Vant Weapp](https://youzan.github.io/vant-weapp)+[小程序](https://developers.weixin.qq.com/miniprogram/dev/)原生语法开发的小程序demo
 
 ## 安装与运行
 ### 下载
@@ -82,4 +82,26 @@ const app = new Vue({
     App,
     //  store
 });
+```
+## [Vant Weapp](https://youzan.github.io/vant-weapp)的使用
+小程序已经支持使用 npm 安装第三方包，在小程序中可通过 npm 的的方式进行安装及使用；由于本项目通过mpvue进行开发，暂时只能通过手动引入的方式。
+### 引入Vant Weapp
+#### 下载
+```bash
+git clone https://github.com/youzan/vant-weapp.git
+```
+将dist目录下的所有文件复制到项目的/static/vant/目录下
+在需要的page页面目录下的main.json中引入所需组件
+```bash
+{
+  "usingComponents": {
+      "van-badge": "../../../static/vant/badge/index",
+      "van-badge-group": "../../../static/vant/badge-group/index"
+  }
+}
+```
+#### 使用
+在对应的index.vue文件中直接使用
+```bash
+<van-badge title="标签名称" info="8" />
 ```
