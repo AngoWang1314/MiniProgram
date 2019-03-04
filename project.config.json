@@ -10,7 +10,7 @@
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "wx43f1a19349101a0a",
+	"appid": "wx3d541edad9ff9dfb",
 	"projectname": "miniprogram",
 	"libVersion": "2.4.3",
 	"condition": {
