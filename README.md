@@ -1,7 +1,7 @@
 # mpvue-小程序
 基于[mpvue](http://mpvue.com)+[vant](https://youzan.github.io/vant-weapp)+[小程序](https://developers.weixin.qq.com/miniprogram/dev/)原生语法开发的小程序demo
 
-## 安装与使用
+## 安装与运行
 ### 下载
 ```bash
 git clone git@github.com:dt-frontend/MiniProgram.git
