@@ -15,6 +15,9 @@
     <div class="list">
       <navigation-list :list="mineList"></navigation-list>
     </div>
+    <div class="list">
+      <navigation-list :list="aboutList"></navigation-list>
+    </div>
 
     <div class="button-quit">
       <navigator open-type="exit" target="miniProgram" type="button" class="quit">退     出</navigator>
@@ -44,12 +47,16 @@ export default {
         navigate_url: '../mineSubpackage/binding-mobile/main'
       }],
       mineList: [{
-          text: '帮助反馈',
-          navigate_url: '../mineSubpackage/help-feedback/main'
-        },{
-          text: '关于',
-          navigate_url: '../mineSubpackage/about/main'
-        }]
+        text: '常见问题',
+        navigate_url: '../mineSubpackage/common-problem/main'
+      },{
+        text: '建议反馈',
+        navigate_url: '../mineSubpackage/feedback/main'
+      }],
+      aboutList: [{
+        text: '关于',
+        navigate_url: '../mineSubpackage/about/main'
+      }]
     }
   },
 
@@ -108,11 +115,12 @@ page{
     }
   }
   .list, .binding-mobile{
+    margin-bottom: 20px;
     background-color: #ffffff;
   }
-  .binding-mobile{
-    margin-bottom: 20px;
-  }
+  // .binding-mobile{
+  //   margin-bottom: 20px;
+  // }
   .button-quit{
     margin-top: 20px;
     .quit{

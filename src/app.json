@@ -23,8 +23,9 @@
       "pages": [
         "about/main",
         "binding-mobile/main",
-        "help-feedback/main",
-        "mine-detail/main"
+        "mine-detail/main",
+        "common-problem/main",
+        "feedback/main"
       ]
     }],
     "preloadRule": {
