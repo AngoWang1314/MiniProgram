@@ -155,3 +155,34 @@ git clone https://github.com/youzan/vant-weapp.git
   }
 }
 ```
+## 页面构建
+主要分为三个主页面及若干子页面，共有四个包：  
+首页：indexSubpackage；  
+学习栈：learningSubpackage；  
+我的：mineSubpackage；  
+公共：commonSubpackage；  
+
+* 首页 —— pages/index  
+ &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/commonSubpackage/curriculum   //课程详细页  
+   
+* 学习栈 —— pages/learning  
+  &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/learningSubpackage/course   //课程总页  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|—— pages/commonSubpackage/curriculum   //课程详细页  
+      
+   &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/learningSubpackage/assignment   //作业  
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|—— pages/learningSubpackage/task-list   //作业详细  
+     
+   &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/learningSubpackage/examination-paper   //试卷  
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|—— pages/learningSubpackage/paper-content   //试卷内容 web-view载体  
+     
+   &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/learningSubpackage/mistakes   //错题  
+   
+* 我的 —— pages/mine  
+  &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/mineSubpackage/mine-detail   //个人信息  
+    
+  &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/mineSubpackage/binding-mobile   //绑定手机  
+    
+  &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/mineSubpackage/feedback   //建议反馈  
+    
+  &nbsp;&nbsp;&nbsp;&nbsp;|—— pages/mineSubpackage/common-problem   //常见问题
+    
